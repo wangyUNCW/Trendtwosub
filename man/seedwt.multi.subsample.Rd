@@ -12,9 +12,11 @@ seedwt.multi.subsample
 A R dataset
 }
 \details{
-(details here; DIU)
+multiple maize inbreds were exposed to all combinations of the following stressors: drought, nitrogen, and density stress. Plants were grown in an experimental plot divided into eight sections, and each of the sections received a combination of between zero and three of the stresses previously mentioned, so that all possible stress combinations were included. More details about the experiment can be found in the references
 }
 \references{
 Wang, Y., Stapleton, A. E., & Chen, C. (2018). Two-sample nonparametric stochastic order inference with an application in plant physiology. Journal of Statistical Computation and Simulation, 88(14), 2668-2683.
+
+Stutts, L., Wang, Y., & Stapleton, A. E. (2018). Plant growth regulators ameliorate or exacerbate abiotic, biotic and combined stress interaction effects on Zea mays kernel weight with inbred-specific patterns. Environmental and experimental botany, 147, 179-188.
 }
 \keyword{datasets}

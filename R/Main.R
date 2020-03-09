@@ -7,7 +7,7 @@ is.odd <- function(x) x %% 2 != 0
 #' This function finds the sum of counts that the x-sample observations is greater than or less than the ones from the y-sample.
 #' @param x,y x and y are numerical vectors of different subsamples. The length of the two vectors can vary.
 #' @details When there is a tie between any pair of observations, 0.5 is added to the count. Missing value is allowed. Missing value is only added to the calculation when it is compared with another missing value from the other subsample.
-#' @return Two values are returned: less.count and more.count. The first one is the total count that the observations in x-sample is less than the ones from the y-sample, and the second outoput is the total count that the observations in x-sample is more than the ones from the y-sample. When there is a tie, 0.5 is added to the count, instead of 1 or 0.
+#' @return Two values are returned: less.count and more.count. The first one is the total count that the observations in x-sample is less than the ones from the y-sample, and the second output is the total count that the observations in x-sample is more than the ones from the y-sample. When there is a tie, 0.5 is added to the count, instead of 1 or 0.
 #' @examples
 #' freq.less(x=c(1,2,4,9,0,0,NA),y=c(1,4,9,NA))
 #' @export
@@ -28,7 +28,7 @@ freq.less<-function(x,y)
 
 #' multi.freq function
 #'
-#' This function find trend in a sample by comparing neighbouring subsamples. The subsamples are stored in a list in R.
+#' This function find trend in a sample by comparing neighboring subsamples. The subsamples are stored in a list in R.
 #' @param fsam a list in R. The order of the vectors in the list follows the order of the subsamples.
 #' @details The first vector of data in the list will be compared with the second vector in the list by using function freq.less. Then the second vector will be compared with the 3rd vector if there is one. The statistics collected are based on computing: \deqn{\frac{1}{n_ln_{l+1}}\sum_{i=1}^{n_l}\sum_{j=1}^{n_{l+1}}1(x_{li}<x_{(l+1)j})}
 #' @return count.vec it is a collection of a sequence less.count, more.count based on freq.less function.
@@ -52,7 +52,7 @@ multi.freq<-function(fsam)
 #' simu.ustat.pattern function
 #'
 #' This function create two independent subsamples of various subsample sizes, with a given probability vector.
-#' @param mean.prob.vec a vector of length 2. Its first element represents the probability that a random observation from one subample is less than the the one from another subsample..
+#' @param mean.prob.vec a vector of length 2. Its first element represents the probability that a random observation from one subsample is less than the the one from another subsample..
 #' @param effn.subs a vector contains two subsample sizes.
 #' @param n.rep the total number of repetition.
 #' @importFrom stats "rnorm"
@@ -82,8 +82,8 @@ simu.ustat.pattern<-function(mean.prob.vec, effn.subs,n.rep=10^2)
 #' chi.stat function
 #'
 #' This function calculates the $M$ statistics value as defined in the reference paper.
-#' @param ftab it is a matrix of two rows. 2 by \eqn{$K$} table.
-#' @details The $M$ statistics is defined as: \deqn{M\triangleq\sum_{l=1}^{K}\left(\frac{(O_{x,l}-E_{x,l})^2}{E_{x,l}}+\frac{(O_{x,l}-E_{x,l})^2}{\left(n_ln_{l+1}-E_{x,l}\right)}\right)+\sum_{l=1}^{K}\left(\frac{(O_{y,l}-E_{y,l})^2}{E_{y,l}}+\frac{(O_{y,l}-E_{y,l})^2}{\left(m_lm_{l+1}-E_{y,l}\right)}\right).}
+#' @param ftab it is a matrix with dimension 2 by \eqn{$K$}.
+#' @details The \eqn{$M$} statistics is defined as: \deqn{M\triangleq\sum_{l=1}^{K}\left(\frac{(O_{x,l}-E_{x,l})^2}{E_{x,l}}+\frac{(O_{x,l}-E_{x,l})^2}{\left(n_ln_{l+1}-E_{x,l}\right)}\right)+\sum_{l=1}^{K}\left(\frac{(O_{y,l}-E_{y,l})^2}{E_{y,l}}+\frac{(O_{y,l}-E_{y,l})^2}{\left(m_lm_{l+1}-E_{y,l}\right)}\right).}
 #' @return chi.val, a chisuqre type of statistics value
 #' @references Wang, Y., Stapleton, A. E., & Chen, C. (2018). Two-sample nonparametric stochastic order inference with an application in plant physiology. Journal of Statistical Computation and Simulation, 88(14), 2668-2683.
 #' @export
@@ -109,7 +109,7 @@ chi.stat<-function(ftab)
 #' @param effn.subsam2 the subsample sizes from sample 2.
 #' @param fn.rep the total number of replications.
 #' @param alpha the size of type I error.
-#' @details The dimensiond of est.prob, effn.subsam1 and effn.subsam2 need to match. For example, the first two entries of the first two rows from est.prob are pf comparison results from subsample1 and subsample2 of sample1. Thus the sum of the two entries is the product of the two subsample sizes.
+#' @details The dimensions of est.prob, effn.subsam1 and effn.subsam2 need to match. For example, the first two entries of the first two rows from est.prob are pf comparison results from subsample1 and subsample2 of sample1. Thus the sum of the two entries is the product of the two subsample sizes.
 #' @return critical.value the critical value of the test based on the alpha level provided
 #' @return chi-stat the chisqure type test statistics value from the sample provided.
 #' @return pvalue the simulated p-value.
@@ -257,9 +257,9 @@ sub.test<-function(sam1,sam2,fn.rep2)## sam1 and sam2 are two lists ###
 
 
 #' A R dataset
-#' @details (details here; DIU)
+#' @details multiple maize inbreds were exposed to all combinations of the following stressors: drought, nitrogen, and density stress. Plants were grown in an experimental plot divided into eight sections, and each of the sections received a combination of between zero and three of the stresses previously mentioned, so that all possible stress combinations were included. More details about the experiment can be found in the references
 #' @references Wang, Y., Stapleton, A. E., & Chen, C. (2018). Two-sample nonparametric stochastic order inference with an application in plant physiology. Journal of Statistical Computation and Simulation, 88(14), 2668-2683.
+#' @references Stutts, L., Wang, Y., & Stapleton, A. E. (2018). Plant growth regulators ameliorate or exacerbate abiotic, biotic and combined stress interaction effects on Zea mays kernel weight with inbred-specific patterns. Environmental and experimental botany, 147, 179-188.
 #' @export
-
-seedwt.multi.subsample<-read.csv('/Users/yishiwang/Desktop/Trendtwosub/Trendtwosub/data-raw/NamedLevelsseedweightrans_periods_zerosV2.csv');
+seedwt.multi.subsample<-read.csv('/Users/yishiwang/Documents/Research Since 2013/Research 2020/Trendtwosub/Trendtwosub/inst/extdata/NamedLevelsseedweightrans_periods_zerosV2.csv');
 usethis::use_data(seedwt.multi.subsample, overwrite = T);

@@ -11,7 +11,7 @@ freq.less(x, y)
 \item{x, y}{x and y are numerical vectors of different subsamples. The length of the two vectors can vary.}
 }
 \value{
-Two values are returned: less.count and more.count. The first one is the total count that the observations in x-sample is less than the ones from the y-sample, and the second outoput is the total count that the observations in x-sample is more than the ones from the y-sample. When there is a tie, 0.5 is added to the count, instead of 1 or 0.
+Two values are returned: less.count and more.count. The first one is the total count that the observations in x-sample is less than the ones from the y-sample, and the second output is the total count that the observations in x-sample is more than the ones from the y-sample. When there is a tie, 0.5 is added to the count, instead of 1 or 0.
 }
 \description{
 This function finds the sum of counts that the x-sample observations is greater than or less than the ones from the y-sample.

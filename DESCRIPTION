@@ -1,6 +1,6 @@
 Package: Trendtwosub
 Title:Two Sample Order Free Trend Nonparametric Inference 
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: as.person(c(
 	"Yishi Wang <wangy@uncw.edu> [aut,cre]",
         "Matthew Villanueva <miv5219@uncw.edu> [aut]",

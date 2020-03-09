@@ -7,7 +7,7 @@
 chi.stat(ftab)
 }
 \arguments{
-\item{ftab}{it is a matrix of two rows. 2 by \eqn{$K$} table.}
+\item{ftab}{it is a matrix with dimension 2 by \eqn{$K$}.}
 }
 \value{
 chi.val, a chisuqre type of statistics value
@@ -16,7 +16,7 @@ chi.val, a chisuqre type of statistics value
 This function calculates the $M$ statistics value as defined in the reference paper.
 }
 \details{
-The $M$ statistics is defined as: \deqn{M\triangleq\sum_{l=1}^{K}\left(\frac{(O_{x,l}-E_{x,l})^2}{E_{x,l}}+\frac{(O_{x,l}-E_{x,l})^2}{\left(n_ln_{l+1}-E_{x,l}\right)}\right)+\sum_{l=1}^{K}\left(\frac{(O_{y,l}-E_{y,l})^2}{E_{y,l}}+\frac{(O_{y,l}-E_{y,l})^2}{\left(m_lm_{l+1}-E_{y,l}\right)}\right).}
+The \eqn{$M$} statistics is defined as: \deqn{M\triangleq\sum_{l=1}^{K}\left(\frac{(O_{x,l}-E_{x,l})^2}{E_{x,l}}+\frac{(O_{x,l}-E_{x,l})^2}{\left(n_ln_{l+1}-E_{x,l}\right)}\right)+\sum_{l=1}^{K}\left(\frac{(O_{y,l}-E_{y,l})^2}{E_{y,l}}+\frac{(O_{y,l}-E_{y,l})^2}{\left(m_lm_{l+1}-E_{y,l}\right)}\right).}
 }
 \examples{
 chi.stat(ftab=rbind(c(20,10,20),c(15,15,20)))

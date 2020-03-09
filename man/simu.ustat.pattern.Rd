@@ -7,7 +7,7 @@
 simu.ustat.pattern(mean.prob.vec, effn.subs, n.rep = 10^2)
 }
 \arguments{
-\item{mean.prob.vec}{a vector of length 2. Its first element represents the probability that a random observation from one subample is less than the the one from another subsample..}
+\item{mean.prob.vec}{a vector of length 2. Its first element represents the probability that a random observation from one subsample is less than the the one from another subsample..}
 
 \item{effn.subs}{a vector contains two subsample sizes.}
 

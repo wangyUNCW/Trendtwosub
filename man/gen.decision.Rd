@@ -31,7 +31,7 @@ gen.decision function
 This function compares frequency comparison counts of subsamples from two independent samples, and calculates a simulated p-value with a novel bootstrap method proposed in the reference paper.
 }
 \details{
-The dimensiond of est.prob, effn.subsam1 and effn.subsam2 need to match. For example, the first two entries of the first two rows from est.prob are pf comparison results from subsample1 and subsample2 of sample1. Thus the sum of the two entries is the product of the two subsample sizes.
+The dimensions of est.prob, effn.subsam1 and effn.subsam2 need to match. For example, the first two entries of the first two rows from est.prob are pf comparison results from subsample1 and subsample2 of sample1. Thus the sum of the two entries is the product of the two subsample sizes.
 }
 \examples{
 freq.mat<-rbind(c(20,5,10,15,20,5),c(15,10,15,10,20,5));

@@ -13,7 +13,7 @@ multi.freq(fsam)
 count.vec it is a collection of a sequence less.count, more.count based on freq.less function.
 }
 \description{
-This function find trend in a sample by comparing neighbouring subsamples. The subsamples are stored in a list in R.
+This function find trend in a sample by comparing neighboring subsamples. The subsamples are stored in a list in R.
 }
 \details{
 The first vector of data in the list will be compared with the second vector in the list by using function freq.less. Then the second vector will be compared with the 3rd vector if there is one. The statistics collected are based on computing: \deqn{\frac{1}{n_ln_{l+1}}\sum_{i=1}^{n_l}\sum_{j=1}^{n_{l+1}}1(x_{li}<x_{(l+1)j})}

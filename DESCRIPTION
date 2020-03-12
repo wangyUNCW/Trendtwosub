@@ -1,15 +1,14 @@
 Package: Trendtwosub
 Title:Two Sample Order Free Trend Nonparametric Inference 
 Version: 0.0.2
-Authors@R: as.person(c(
-	"Yishi Wang <wangy@uncw.edu> [aut,cre]",
-        "Matthew Villanueva <miv5219@uncw.edu> [aut]",
-	"Ann Stapleton <stapletona@uncw.edu> [aut]"
-  ))
+Authors@R: c(person("Yishi Wang", "Developer", role = c("aut", "cre"),
+                     email = "wangy@uncw.edu"),
+              person("Matthew Villanueva", "Developer", role = "aut"),
+              person("Ann Stapleton", "Developer", role = "aut"))
 Description: The package contains functions for non-parametric trend comparison of two independent samples with sequential subsamples.
 Depends: R (>= 3.5.0)
 License: GPL (>= 2)
-Imports: magrittr,stats
+Imports: magrittr,stats,usethis
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1

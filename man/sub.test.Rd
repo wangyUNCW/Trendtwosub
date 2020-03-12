@@ -30,7 +30,7 @@ attach(seedwt.multi.subsample)
 Lev.TN<-levels(TreatmentName);
 Lev.Line<-levels(Line);
 n<-dim(seedwt.multi.subsample)[1];
-level.show=c(1:8);fn.rep3=10^3;
+level.show=c(1:8);fn.rep3=10^2;
 line.name<-Lev.Line[1]; t1.name<-Lev.TN[1];t2.name<-Lev.TN[3];
 ### To compare the GA treatment and the PACGA treatment from line B73
 par(mfrow=c(1,2))

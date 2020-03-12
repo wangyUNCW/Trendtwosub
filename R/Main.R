@@ -82,8 +82,8 @@ simu.ustat.pattern<-function(mean.prob.vec, effn.subs,n.rep=10^2)
 #' chi.stat function
 #'
 #' This function calculates the $M$ statistics value as defined in the reference paper.
-#' @param ftab it is a matrix with dimension 2 by \eqn{$K$}.
-#' @details The \eqn{$M$} statistics is defined as: \deqn{M\triangleq\sum_{l=1}^{K}\left(\frac{(O_{x,l}-E_{x,l})^2}{E_{x,l}}+\frac{(O_{x,l}-E_{x,l})^2}{\left(n_ln_{l+1}-E_{x,l}\right)}\right)+\sum_{l=1}^{K}\left(\frac{(O_{y,l}-E_{y,l})^2}{E_{y,l}}+\frac{(O_{y,l}-E_{y,l})^2}{\left(m_lm_{l+1}-E_{y,l}\right)}\right).}
+#' @param ftab it is a matrix with dimension 2 by \eqn{K}.
+#' @details The \eqn{M} statistics is defined as: \deqn{M=\sum_{l=1}^{K}\left(\frac{(O_{x,l}-E_{x,l})^2}{E_{x,l}}+\frac{(O_{x,l}-E_{x,l})^2}{\left(n_ln_{l+1}-E_{x,l}\right)}\right)+\sum_{l=1}^{K}\left(\frac{(O_{y,l}-E_{y,l})^2}{E_{y,l}}+\frac{(O_{y,l}-E_{y,l})^2}{\left(m_lm_{l+1}-E_{y,l}\right)}\right).}
 #' @return chi.val, a chisuqre type of statistics value
 #' @references Wang, Y., Stapleton, A. E., & Chen, C. (2018). Two-sample nonparametric stochastic order inference with an application in plant physiology. Journal of Statistical Computation and Simulation, 88(14), 2668-2683.
 #' @export
@@ -190,7 +190,7 @@ gen.decision<-function(est.prob, effn.subsam1,effn.subsam2,fn.rep=10^3,alpha=.05
 #' pow.ana.gen.decision(prob.vec,prob.vec,sub.sizes1, sub.sizes1)
 #' pow.ana.gen.decision(prob.vec,prob.vec,sub.sizes1, sub.sizes1,alpha.level=0.1)
 
-pow.ana.gen.decision<-function(mean.prob1,mean.prob2,effn.subsam1,effn.subsam2,N.rep=10^2, boot.rep=10^2,rseed=1234,alpha.level=0.05)
+pow.ana.gen.decision<-function(mean.prob1,mean.prob2,effn.subsam1,effn.subsam2,N.rep=10^1, boot.rep=10^1,rseed=1234,alpha.level=0.05)
 {
   set.seed(rseed);
   n.col=length(mean.prob1);
@@ -224,7 +224,7 @@ pow.ana.gen.decision<-function(mean.prob1,mean.prob2,effn.subsam1,effn.subsam2,N
 #' Lev.TN<-levels(TreatmentName);
 #' Lev.Line<-levels(Line);
 #' n<-dim(seedwt.multi.subsample)[1];
-#' level.show=c(1:8);fn.rep3=10^3;
+#' level.show=c(1:8);fn.rep3=10^2;
 #' line.name<-Lev.Line[1]; t1.name<-Lev.TN[1];t2.name<-Lev.TN[3];
 #' ### To compare the GA treatment and the PACGA treatment from line B73
 #' par(mfrow=c(1,2))
@@ -256,10 +256,15 @@ sub.test<-function(sam1,sam2,fn.rep2)## sam1 and sam2 are two lists ###
 }
 
 
-#' A R dataset
+#' seedwt.multi.subsample dataset
 #' @details multiple maize inbreds were exposed to all combinations of the following stressors: drought, nitrogen, and density stress. Plants were grown in an experimental plot divided into eight sections, and each of the sections received a combination of between zero and three of the stresses previously mentioned, so that all possible stress combinations were included. More details about the experiment can be found in the references
+#' @importFrom usethis "use_data"
 #' @references Wang, Y., Stapleton, A. E., & Chen, C. (2018). Two-sample nonparametric stochastic order inference with an application in plant physiology. Journal of Statistical Computation and Simulation, 88(14), 2668-2683.
 #' @references Stutts, L., Wang, Y., & Stapleton, A. E. (2018). Plant growth regulators ameliorate or exacerbate abiotic, biotic and combined stress interaction effects on Zea mays kernel weight with inbred-specific patterns. Environmental and experimental botany, 147, 179-188.
 #' @export
-seedwt.multi.subsample<-read.csv('/Users/yishiwang/Documents/Research Since 2013/Research 2020/Trendtwosub/Trendtwosub/inst/extdata/NamedLevelsseedweightrans_periods_zerosV2.csv');
+
+seedwt.multi.subsample<-read.csv("inst/extdata/NamedLevelsseedweightrans_periods_zerosV2.csv")
+
 usethis::use_data(seedwt.multi.subsample, overwrite = T);
+
+

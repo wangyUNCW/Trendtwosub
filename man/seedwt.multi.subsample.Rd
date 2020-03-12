@@ -3,13 +3,13 @@
 \docType{data}
 \name{seedwt.multi.subsample}
 \alias{seedwt.multi.subsample}
-\title{A R dataset}
+\title{seedwt.multi.subsample dataset}
 \format{An object of class \code{data.frame} with 2916 rows and 10 columns.}
 \usage{
 seedwt.multi.subsample
 }
 \description{
-A R dataset
+seedwt.multi.subsample dataset
 }
 \details{
 multiple maize inbreds were exposed to all combinations of the following stressors: drought, nitrogen, and density stress. Plants were grown in an experimental plot divided into eight sections, and each of the sections received a combination of between zero and three of the stresses previously mentioned, so that all possible stress combinations were included. More details about the experiment can be found in the references

@@ -5,7 +5,7 @@
 \title{pow.ana.gen.decision function}
 \usage{
 pow.ana.gen.decision(mean.prob1, mean.prob2, effn.subsam1, effn.subsam2,
-  N.rep = 10^2, boot.rep = 10^2, rseed = 1234, alpha.level = 0.05)
+  N.rep = 10^1, boot.rep = 10^1, rseed = 1234, alpha.level = 0.05)
 }
 \arguments{
 \item{mean.prob1, }{the probability that observations of a subsample is less than the ones from another subsample, in sample #1.}
